@@ -11,12 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogMonitor", "LogMonitor\Lo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{9F66F808-7D79-455A-8C3C-70700C884F24}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "img", "img", "{7535482C-5D50-47A0-AADF-1D1350BD53CD}"
-	ProjectSection(SolutionItems) = preProject
-		..\..\..\Users\suat.kose\Desktop\monitor.gif = ..\..\..\Users\suat.kose\Desktop\monitor.gif
-		..\..\..\Users\suat.kose\Desktop\publisher.gif = ..\..\..\Users\suat.kose\Desktop\publisher.gif
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
