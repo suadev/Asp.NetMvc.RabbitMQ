@@ -4,7 +4,7 @@ using RabbitMQ.Client;
 using System;
 using System.Text;
 
-namespace Provider
+namespace Publisher
 {
     class Program
     {
@@ -26,7 +26,7 @@ namespace Provider
                     {
                         var log = new LogModel();
                         log.Id = i;
-                        log.Time = DateTime.Now.ToShortTimeString();
+                        log.Time = DateTime.Now.ToString("dd.MM.yyyy hh:mm:ss");
                         log.Message = string.Format("Log Message {0}", i);
 
                         var logMessage = JsonConvert.SerializeObject(log);

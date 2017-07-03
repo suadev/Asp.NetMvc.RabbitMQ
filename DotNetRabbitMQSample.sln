@@ -3,13 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Provider", "Provider\Provider.csproj", "{FE342FF1-7059-4ADE-AD9B-21F1EB34882F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Publisher", "Provider\Publisher.csproj", "{FE342FF1-7059-4ADE-AD9B-21F1EB34882F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consumer", "Consumer\Consumer.csproj", "{18A51D57-6C3D-458B-9518-F1F9142B6CB9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogMonitor", "LogMonitor\LogMonitor.csproj", "{E3985A91-FB1A-4961-B25F-47BEFC13851A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{9F66F808-7D79-455A-8C3C-70700C884F24}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "img", "img", "{7535482C-5D50-47A0-AADF-1D1350BD53CD}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Users\suat.kose\Desktop\monitor.gif = ..\..\..\Users\suat.kose\Desktop\monitor.gif
+		..\..\..\Users\suat.kose\Desktop\publisher.gif = ..\..\..\Users\suat.kose\Desktop\publisher.gif
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

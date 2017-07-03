@@ -31,11 +31,11 @@
 <script src="~/Scripts/jquery-1.10.2.min.js"></script>
 
 <script>
-    var apiBaseUri = '';
+    var baseUri = '';
 
     ($(function () {
         $(document).ready(function () {
-            apiBaseUri = '@string.Format("{0}://{1}{2}", Request.Url.Scheme, Request.Url.Authority, Url.Content("~"))'
+            baseUri = '@string.Format("{0}://{1}{2}", Request.Url.Scheme, Request.Url.Authority, Url.Content("~"))'
             SetTimer();
         });
     }));
@@ -48,14 +48,15 @@
 
     function GetLogs() {
         $.ajax({
-            url: apiBaseUri + "Home/FetchLogs",
+            url: baseUri + "Home/FetchLogs",
             type: "GET",
             success: function (data) {
                 console.log(data);
                 var tbody = $('.logTable').find('tbody');
                 $(tbody).find('tr').remove();
                 $(data).each(function () {
-                    $(tbody).append('<tr> <td>' + this.Id + '</td> <td>' + this.Time + '</td> <td>' + this.Message + '</td>  </tr>');
+                    var cls = this.Id % 2 == 0 ? 'grayRow' : 'whiteRow';
+                    $(tbody).append('<tr class=' + cls + '> <td>' + this.Id + '</td> <td>' + this.Time + '</td> <td>' + this.Message + '</td>  </tr>');
                 });
             },
             error: function () {
@@ -75,4 +76,12 @@
             border: thin solid rgb(199, 199, 199);
             padding: 5px;
         }
+
+    .grayRow {
+        background-color: #e3d9d9;
+    }
+
+    .whiteRow {
+        background-color: white;
+    }
 </style>

@@ -33,6 +33,9 @@ namespace LogMonitor
         private void SetupRabbitMqSubscriber()
         {
             var factory = new ConnectionFactory() { HostName = "localhost" };
+            var logFilePath = string.Format("{0}logs.txt", HostingEnvironment.ApplicationPhysicalPath);
+
+            File.WriteAllText(logFilePath, string.Empty);
             connection = factory.CreateConnection();
             channel = connection.CreateModel();
             channel.QueueDeclare(queue: "log_queue", durable: false, exclusive: false, autoDelete: false, arguments: null);
@@ -43,7 +46,7 @@ namespace LogMonitor
                 var body = ea.Body;
                 var message = Encoding.UTF8.GetString(body);
                 //Insert DB instead of .txt file
-                File.AppendAllText(HostingEnvironment.ApplicationPhysicalPath + "logs.txt", message + "\n");
+                File.AppendAllText(logFilePath, message + "\n");
             };
             channel.BasicConsume(queue: "log_queue", noAck: true, consumer: consumer);
         }
