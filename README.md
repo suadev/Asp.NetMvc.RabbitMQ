@@ -1,4 +1,4 @@
-# Installing on Development Environment 
+# Installing Development Environment 
 
 - Download RabbitMQ from <a class="adownload" href="/releases/rabbitmq-server/v3.6.10/rabbitmq-server-3.6.10.exe">rabbitmq-server-3.6.10.exe</a>
 
