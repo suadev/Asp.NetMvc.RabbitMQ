@@ -1,6 +1,6 @@
 # Installing Development Environment 
 
-- Download RabbitMQ from <a class="adownload" href="/releases/rabbitmq-server/v3.6.10/rabbitmq-server-3.6.10.exe">rabbitmq-server-3.6.10.exe</a>
+- Download RabbitMQ from <a class="adownload" href="https://www.rabbitmq.com/releases/rabbitmq-server/v3.6.10/rabbitmq-server-3.6.10.exe">rabbitmq-server-3.6.10.exe</a>
 
 - Download and run the <a href="http://www.erlang.org/download.html">Erlang Windows Binary File</a>. It takes around 5 minutes.
  
